@@ -1,6 +1,6 @@
 {
   "name": "susi_desktop",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A desktop client for Susi AI",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/fossasia/susi_desktop.git"
   },
-  "author": "Ankit R Gadiya",
+  "author": "Fossasia",
   "license": "LGPL-2.1",
   "bugs": {
     "url": "https://github.com/fossasia/susi_desktop/issues"
   },
   "homepage": "https://github.com/fossasia/susi_desktop#readme",
   "devDependencies": {
-    "electron": "^1.4.13",
-    "electron-prebuilt": "^1.4.13"
+    "electron": "^1.4.13"
   }
 }
