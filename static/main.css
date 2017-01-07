@@ -1,0 +1,15 @@
+.message-send-tab {
+  position: absolute;
+  bottom: 0;
+}
+
+.ui.input {
+  width: 250px;
+  border-width: .5px;
+  border-radius: 600px;
+  padding: 9px;
+}
+
+.ui.button {
+  width: 50px;
+}
