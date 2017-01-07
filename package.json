@@ -16,6 +16,9 @@
     "url": "https://github.com/fossasia/susi_desktop/issues"
   },
   "homepage": "https://github.com/fossasia/susi_desktop#readme",
+  "dependencies": {
+    "request": "^2.79.0"
+  },
   "devDependencies": {
     "electron": "^1.4.13"
   }
