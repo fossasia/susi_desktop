@@ -5,11 +5,12 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow;
-app.on('ready',function(){
+app.on('ready', function(){
 	mainWindow = new BrowserWindow({
-    width: 800,
+    width: 360,
     height: 600
   });
-	 mainWindow.loadURL('file://' + __dirname + '/Main/index.html')
+
+	mainWindow.loadURL('file://' + __dirname + '/static/index.html')
 
 });
