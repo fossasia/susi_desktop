@@ -1,9 +1,29 @@
 # Susi desktop
-![screenshot from 2017-01-03 19-06-45](https://cloud.githubusercontent.com/assets/18071765/21609355/ee0aace0-d1e7-11e6-91d9-758da9b0af3b.png)
 
-### Usage
-```npm install```
+Susi is an AI which replies smartly to anything that you put. Currently Susi is in highly active development and is still in early stages.
 
-```npm start```
+### Style Guide
+[Airbnb](https://github.com/airbnb/javascript) Style guide is used in order to create this project. Please consider reading guide before contributing to this project.
 
-Under Development
+### Dependencies
+
+* This project is created with the help of **Electron** which is a native desktop apps creation kit by Github.
+
+* This project also requires `require` library which is used to fetch the response from API.
+
+### Setup Development Environment
+
+Since this app is based on electron, you need [NodeJS](https://nodejs.org) installed in order to run it.
+
+In order to setup the development environment, please make sure the following commands are run primarily.
+
+```shell
+npm install -g electron
+npm install
+```
+
+Once these commands are run, all you need to do in order to run this program is to run `electron .` from the directory you are working in.
+
+### Contributing
+
+Please be sure to open an issue before submitting your Pull Request. Be sure to attach the screenshot of running app. All tests that will be provided soon must be passed for PR to be merged.
