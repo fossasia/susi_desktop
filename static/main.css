@@ -1,15 +1,86 @@
+body {
+  font-family: 'Muli', sans-serif;
+}
+
 .message-send-tab {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
 .ui.input {
-  width: 250px;
+  width: 100vw;
   border-width: .5px;
   border-radius: 600px;
   padding: 9px;
 }
 
-.ui.button {
-  width: 50px;
+section {
+  width: 99vw;
+  margin: 50px auto;
+}
+
+section div {
+  max-width: 99vw;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  line-height: 24px;
+  padding: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+.from-me {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  background: #0B93F6;
+  border-radius: 25px;
+  float: right;
+}
+.from-me:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -2px;
+  right: -7px;
+  height: 20px;
+}
+.from-me:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -2px;
+  right: -56px;
+  width: 26px;
+  height: 20px;
+  background: white;
+}
+
+.from-them {
+  position: relative;
+  padding: 10px 20px;
+  background: #E5E5EA;
+  border-radius: 25px;
+  color: black;
+  float: left;
+}
+.from-them:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  left: -7px;
+  height: 20px;
+}
+.from-them:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  left: 4px;
+  width: 26px;
+  height: 20px;
+  background: white;
 }
