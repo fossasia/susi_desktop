@@ -2,7 +2,7 @@
 var send_button = document.getElementById('message-send-button');
 var text = document.getElementById('message-text');
 var list = document.getElementById('message-data');
-var reply = "";
+var reply = undefined;
 var url = "http://api.asksusi.com/susi/chat.json?q=";
 
 function checkResponse(response) {
@@ -18,13 +18,15 @@ function getJSON(response) {
 }
 
 var send_message = function(message) {
-  fetch(url + encodeURI(message))
+  fetch(url + encodeURI(message), { method: "get", cache: "no-store" })
     .then(checkResponse)
     .then(getJSON)
     .then(function(data) {
+      reply = undefined;
       reply = data.answers[0].data[0].answer;
     })
     .catch(function(err) {
+      reply=undefined;
       reply = "Sorry. There seems to be a problem."
     })
 }
@@ -39,9 +41,21 @@ var append = function(text, attr){
   list.appendChild(clear);
 }
 
-send_button.addEventListener('click', function() {
-  let message = text.value;
-  send_message(message);
-  append(message, { name: "class", val: "from-me" });
-  append(reply, { name: "class", val: "from-them" })
-});
+var addReply = function() {
+  if(reply != undefined) {
+    append(reply, { name: "class", val: "from-them" });
+    reply = undefined;
+  }
+}
+
+text.onkeypress = function(e){
+  if (!e) e = window.event;
+  var keyCode = e.keyCode || e.which;
+  if (keyCode == '13'){
+    let message = text.value;
+    send_message(message);
+    append(message, { name: "class", val: "from-me" });
+    timeout = window.setTimeout(addReply(), 2000);
+    window.clearTimeout(timeout);
+  }
+}
