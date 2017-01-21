@@ -18,14 +18,6 @@ body {
   padding: 9px;
   margin: 0 20px 10px 20px;
 }
-.ui.button {
-  background: #0B93F6;
-  border: 4px solid #0B93F6;
-  border-radius: 25px;
-  color: white;
-  float: right;
-  margin: 0 10px 5px 10px;
-}
 section {
   width: 99vw;
   margin: 50px auto;
