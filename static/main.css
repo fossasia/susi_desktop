@@ -1,6 +1,7 @@
 body {
   font-family: 'Muli', sans-serif;
   background: #E8E5E3;
+  overflow-x: hidden;
 }
 
 .message-send-tab {
@@ -87,4 +88,13 @@ section div {
   width: 26px;
   height: 20px;
   background: #fafafa;
+}
+
+.message-data {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.messages {
+  overflow-x: hidden;
 }
