@@ -4,6 +4,7 @@ var text = document.getElementById('message-text');
 var list = document.getElementById('message-data');
 var reply = undefined;
 var url = "http://api.asksusi.com/susi/chat.json?q=";
+var body = document.getElementById('window');
 
 function checkResponse(response) {
   if(response.status===200) {
@@ -55,7 +56,7 @@ text.onkeypress = function(e){
     let message = text.value;
     send_message(message);
     append(message, { name: "class", val: "from-me" });
-    timeout = window.setTimeout(addReply(), 2000);
-    window.clearTimeout(timeout);
+    addReply();
+    body.scrollTop = list.scrollHeight;
   }
 }
