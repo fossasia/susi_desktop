@@ -54,6 +54,7 @@ text.onkeypress = function(e){
   var keyCode = e.keyCode || e.which;
   if (keyCode == '13'){
     let message = text.value;
+    text.value = "";
     send_message(message);
     append(message, { name: "class", val: "from-me" });
     addReply();
