@@ -53,6 +53,7 @@ text.onkeypress = function(e){
   if (!e) e = window.event;
   var keyCode = e.keyCode || e.which;
   if (keyCode == '13'){
+    e.preventDefault();
     let message = text.value;
     send_message(message);
     append(message, { name: "class", val: "from-me" });

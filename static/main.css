@@ -15,7 +15,7 @@ body {
 .ui.input {
   width: 90vw;
   border: 0;
-  border-radius: 600px;
+  border-radius: 20px;
   padding: 9px;
   margin: 0 20px 10px 20px;
 }
