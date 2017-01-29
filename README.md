@@ -1,5 +1,7 @@
 # Susi desktop
 
+[![Join the chat at https://gitter.im/fossasia/susi_desktop](https://badges.gitter.im/fossasia/susi_desktop.svg)](https://gitter.im/fossasia/susi_desktop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Susi is an AI which replies smartly to anything that you put. Currently Susi is in highly active development and is still in early stages.
 
 ### Style Guide
