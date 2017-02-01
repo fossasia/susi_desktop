@@ -98,3 +98,13 @@ section div {
 .messages {
   overflow-x: hidden;
 }
+
+.me {
+  float:right;
+  font-size: 13px;
+}
+
+.susi {
+  float:left;
+  font-size: 13px;
+}

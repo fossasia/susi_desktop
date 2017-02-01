@@ -37,6 +37,11 @@ var append = function(text, attr){
   el.setAttribute(attr.name, attr.val);
   el.appendChild(document.createTextNode(text));
   list.appendChild(el);
+  if (attr.val === "from-them") {
+    addTime({ name: "class", val: "susi", text: "susi" });
+  } else {
+    addTime({ name: "class", val: "me", text: "you" });
+  }
   let clear = document.createElement("div");
   clear.setAttribute("class", "clear");
   list.appendChild(clear);
@@ -47,6 +52,14 @@ var addReply = function() {
     append(reply, { name: "class", val: "from-them" });
     reply = undefined;
   }
+}
+
+var addTime = function(attr) {
+  let date = new Date();
+  let time = document.createElement("div");
+  time.setAttribute(attr.name, attr.val);
+  time.innerHTML = attr.text + "    " + date.getHours() + ":" +date.getMinutes();
+  list.appendChild(time);
 }
 
 text.onkeypress = function(e){
