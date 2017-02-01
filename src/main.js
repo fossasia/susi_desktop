@@ -55,10 +55,12 @@ text.onkeypress = function(e){
   if (keyCode == '13'){
     e.preventDefault();
     let message = text.value;
-    text.value = "";
-    send_message(message);
-    append(message, { name: "class", val: "from-me" });
-    addReply();
+    if (message.length !== 0) {
+      text.value = "";
+      send_message(message);
+      append(message, { name: "class", val: "from-me" });
+      addReply();
+    }
     $('html,body').animate({
       scrollTop: $("#message-data").offset().top + list.scrollHeight}, 1200);
     }
