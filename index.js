@@ -1,6 +1,12 @@
 const electron = require('electron');
 const app = electron.app;
 
+require('electron-context-menu')({
+    prepend: (params, browserWindow) => [{
+        visible: params.mediaType === 'text'
+    }],
+    showInspectElement: false
+});
 
 const BrowserWindow = electron.BrowserWindow;
 
