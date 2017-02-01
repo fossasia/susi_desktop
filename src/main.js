@@ -59,6 +59,7 @@ text.onkeypress = function(e){
     send_message(message);
     append(message, { name: "class", val: "from-me" });
     addReply();
-    body.scrollTop = list.scrollHeight;
-  }
+    $('html,body').animate({
+      scrollTop: $("#message-data").offset().top + list.scrollHeight}, 1200);
+    }
 }
