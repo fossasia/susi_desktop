@@ -18,5 +18,8 @@
   "homepage": "http://asksusi.com",
   "devDependencies": {
     "electron": "^1.4.13"
+  },
+  "dependencies": {
+    "electron-context-menu": "^0.8.0"
   }
 }
