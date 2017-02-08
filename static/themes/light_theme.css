@@ -1,0 +1,13 @@
+/* Setting up css root variables for light theme */
+
+:root {
+  --bg-color: #ffffff;
+  --from-me-bg-color: #9ccc65;
+  --from-them-bg-color: #7986cb;
+  --font-color: #ffffff;
+  --box-shadow-color: #888888;
+  --time-color: #9e9e9e;
+  --message-tab-bg-color: #E8E5E3;
+  --input-bg-color: #ffffff;
+  --input-text-color: #000000;
+}
