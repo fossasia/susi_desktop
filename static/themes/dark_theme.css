@@ -10,4 +10,11 @@
   --message-tab-bg-color: #546e7a;
   --input-bg-color: #607d8b;
   --input-text-color: #ffffff;
+  --toolbar-bg-color: #455a64;
+  --toolbar-option-color: #ffffff;
+  --toolbar-option-color-hover: #607d8b;
+  --toolbar-icon-color: #ffffff;
+  --theme-content-bg-color: #455a64;
+  --theme-content-option-color: #ffffff;
+  --theme-content-option-color-hover: #546e7a;
 }

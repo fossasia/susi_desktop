@@ -5,10 +5,18 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./main.css">
     <link id="light-theme" rel="stylesheet" href="./themes/light_theme.css">
+    <link rel="stylesheet" href="../src/font-awesome/css/font-awesome.min.css">
   </head>
   <body id="window">
     <div class="container">
-
+      <div class="toolbar">
+        <div class="theme toolbar-option"><i class="fa fa-th-large fa-fw toolbar-icon" aria-hidden="true"></i>&nbsp; Theme</div>
+        <div class="settings toolbar-option"><i class="fa fa-gear fa-fw toolbar-icon" aria-hidden="true"></i>&nbsp; Settings</div>	
+      </div>	
+      <div class="theme-content">
+	    <a href="#" onclick="applyLightTheme()">Light</a>
+    	<a href="#" onclick="applyDarkTheme()">Dark</a>
+  	  </div>
       <section class="messages" id="messages">
         <div class="message-data" id="message-data"></div>
       </section>
