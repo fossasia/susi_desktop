@@ -116,3 +116,55 @@ section div {
   font-size: 13px;
   color: var(--time-color);
 }
+
+.toolbar {
+  position: fixed;
+  width: 100%;
+  top:0px;
+  display:flex;
+  align-items: center;
+  background-color: var(--toolbar-bg-color);
+  box-shadow: 0px 1px 8px var(--box-shadow-color);
+  z-index: 1;
+}
+
+.toolbar-option {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  color: var(--toolbar-option-color);
+  transition: 0.5s all;
+}
+
+.toolbar-option:hover {
+  background-color: var(--toolbar-option-color-hover);
+}
+
+.toolbar-icon {
+  color: var(--toolbar-icon-color);
+}
+
+.theme-content {
+  display: none;
+  position: fixed;
+  top: 35px;
+  background-color: var(--theme-content-bg-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: 0.5s all;
+}
+
+.theme-content a {
+  color: var(--theme-content-option-color);
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  transition: 0.5s all;
+}
+
+.theme-content a:hover {
+  background-color: var(--theme-content-option-color-hover);
+}

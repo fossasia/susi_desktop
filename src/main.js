@@ -64,7 +64,7 @@ var addTime = function(attr) {
   list.appendChild(time);
 }
 
-text.onkeypress = function(e){
+text.onkeypress = function(e) {
   if (!e) e = window.event;
   var keyCode = e.keyCode || e.which;
   if (keyCode == '13'){
@@ -80,6 +80,27 @@ text.onkeypress = function(e){
       scrollTop: $("#message-data").offset().top + list.scrollHeight}, 1200);
     }
 }
+
+var applyLightTheme = function() {
+  if (document.getElementById('dark-theme') !== null) {
+    $('#dark-theme').remove();
+  }
+  if (document.getElementById('light-theme') === null) {
+    $('head').append('<link id="light-theme" rel="stylesheet" type="text/css" href="themes/light_theme.css">'); 
+  }
+  $(".theme-content").hide();
+}
+
+var applyDarkTheme = function() {
+ if (document.getElementById('light-theme') !== null) {
+    $('#light-theme').remove();
+  }
+  if (document.getElementById('dark-theme') === null) {
+    $('head').append('<link id="dark-theme" rel="stylesheet" type="text/css" href="themes/dark_theme.css">'); 
+  }
+  $(".theme-content").hide();
+}
+
 
 // Customizing the app menu
 
@@ -171,33 +192,6 @@ const template = [
       }
     ]
   },
-  {
-    label: 'Theme',
-    submenu: [
-      {
-        label: 'Light',
-        click () { 
-          if (document.getElementById('dark-theme') !== null) {
-            $('#dark-theme').remove();
-          }
-          if (document.getElementById('light-theme') === null) {
-            $('head').append('<link id="light-theme" rel="stylesheet" type="text/css" href="themes/light_theme.css">'); 
-          }
-        }
-      },
-      {
-        label: 'Dark',
-        click () {
-          if (document.getElementById('light-theme') !== null) {
-            $('#light-theme').remove();
-          }
-          if (document.getElementById('dark-theme') === null) {
-            $('head').append('<link id="dark-theme" rel="stylesheet" type="text/css" href="themes/dark_theme.css">'); 
-          }
-        }
-      }
-    ]
-  }
 ];
 
 if (process.platform === 'darwin') {
@@ -246,3 +240,13 @@ if (process.platform === 'darwin') {
 
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
+
+$(".theme").click(function () {
+  $(".theme-content").toggle();
+});
+
+$(".settings").click(function () {
+  $(".theme-content").hide();
+
+  /* Other stuff to be added here */
+});
