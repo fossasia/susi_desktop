@@ -1,0 +1,21 @@
+{
+  "name": "susi_desktop",
+  "description": "A desktop client for Susi AI",
+  "main": "index.js",
+  "authors": [
+    "Fossasia"
+  ],
+  "license": "LGPL-2.1",
+  "homepage": "https://github.com/fossasia/susi_desktop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^4.7.0",
+    "jquery": "^3.1.1"
+  }
+}
