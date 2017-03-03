@@ -27,10 +27,12 @@ var send_message = function(message) {
     .then(function(data) {
       reply = undefined;
       reply = data.answers[0].data[0].answer;
+      addReply();
     })
     .catch(function(err) {
       reply=undefined;
-      reply = "Sorry. There seems to be a problem."
+      reply = "Sorry. There seems to be a problem.";
+      addReply();
     })
 }
 
@@ -47,6 +49,8 @@ var append = function(text, attr){
   let clear = document.createElement("div");
   clear.setAttribute("class", "clear");
   list.appendChild(clear);
+  $('html,body').animate({
+      scrollTop: $("#message-data").offset().top + list.scrollHeight}, 1200);
 }
 
 var addReply = function() {
@@ -72,9 +76,8 @@ text.onkeypress = function(e) {
     let message = text.value;
     if (message.length !== 0) {
       text.value = "";
-      send_message(message);
       append(message, { name: "class", val: "from-me" });
-      addReply();
+      send_message(message);
     }
     $('html,body').animate({
       scrollTop: $("#message-data").offset().top + list.scrollHeight}, 1200);
