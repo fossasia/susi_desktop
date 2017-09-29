@@ -1,7 +1,7 @@
 {
   "name": "susi_desktop",
   "version": "0.0.1",
-  "description": "A desktop client for Susi AI",
+  "description": "Susi AI Desktop Client",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
@@ -10,14 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/fossasia/susi_desktop.git"
   },
-  "author": "Fossasia",
-  "license": "LGPL-2.1",
+  "author": "FOSSASIA",
   "bugs": {
     "url": "https://github.com/fossasia/susi_desktop/issues"
   },
-  "homepage": "http://asksusi.com",
+  "homepage": "https://chat.susi.ai/overview",
   "devDependencies": {
-    "electron": "^1.4.13"
+    "electron": "^1.7.8"
   },
   "dependencies": {
     "electron-context-menu": "^0.8.0"
