@@ -21,9 +21,7 @@ In order to setup the development environment, please make sure the following co
 
 ```shell
 npm install -g electron
-npm install -g bower
 npm install
-bower install
 ```
 
 Once these commands are run, all you need to do in order to run this program is to run `electron .` from the directory you are working in.
