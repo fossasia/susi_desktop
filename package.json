@@ -2,21 +2,30 @@
   "name": "susi_desktop",
   "version": "0.0.1",
   "description": "Susi AI Desktop Client",
-  "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron app",
+    "test": "xo"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fossasia/susi_desktop.git"
   },
+  "keywords": [
+    "SUSI",
+    "AI",
+    "assistant",
+    "desktop-app",
+    "electron"
+  ],
   "author": "FOSSASIA",
   "bugs": {
     "url": "https://github.com/fossasia/susi_desktop/issues"
   },
   "homepage": "https://chat.susi.ai/overview",
   "devDependencies": {
-    "electron": "^1.7.8"
+    "electron": "^1.7.8",
+    "electron-debug": "^1.4.0",
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "components-font-awesome": "^4.6.3",

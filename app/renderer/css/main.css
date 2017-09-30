@@ -1,0 +1,6 @@
+/* CSS for the webview element */
+webview {
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+}
