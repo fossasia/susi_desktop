@@ -4,7 +4,8 @@
   "description": "Susi AI Desktop Client",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "xo"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,8 @@
   },
   "homepage": "https://chat.susi.ai/overview",
   "devDependencies": {
-    "electron": "^1.7.8"
+    "electron": "^1.7.8",
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "components-font-awesome": "^4.6.3",
