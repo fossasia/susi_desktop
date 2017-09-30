@@ -19,6 +19,8 @@
     "electron": "^1.7.8"
   },
   "dependencies": {
-    "electron-context-menu": "^0.8.0"
+    "components-font-awesome": "^4.6.3",
+    "electron-context-menu": "^0.8.0",
+    "jquery": "^3.2.1"
   }
 }
