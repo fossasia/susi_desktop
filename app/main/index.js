@@ -1,5 +1,6 @@
 const path = require('path');
 const electron = require('electron');
+
 const {app, BrowserWindow} = electron;
 
 // Globally declaring main window to prevent it from being garbage collected.
@@ -18,7 +19,7 @@ const iconPath = () => {
 };
 
 // A function to create a new BrowserWindow.
-function createMainWindow () {
+function createMainWindow() {
 	mainWindow = new BrowserWindow({
 		defaultHeight: 600,
 		defaultWidth: 1000,
@@ -28,6 +29,6 @@ function createMainWindow () {
 }
 
 // Triggers when the app is ready.
-app.on('ready', function(){
+app.on('ready', () => {
 	createMainWindow();
 });
