@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Susi AI Desktop Client",
   "scripts": {
-    "start": "electron .",
+    "start": "electron app",
     "test": "xo"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "components-font-awesome": "^4.6.3",
     "electron-context-menu": "^0.8.0",
+    "electron-debug": "^1.4.0",
     "jquery": "^3.2.1"
   }
 }
