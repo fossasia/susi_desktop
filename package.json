@@ -2,7 +2,6 @@
   "name": "susi_desktop",
   "version": "0.0.1",
   "description": "Susi AI Desktop Client",
-  "main": "index.js",
   "scripts": {
     "start": "electron .",
     "test": "xo"
@@ -11,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/fossasia/susi_desktop.git"
   },
+  "keywords": [
+    "SUSI",
+    "AI",
+    "assistant",
+    "desktop-app",
+    "electron"
+  ],
   "author": "FOSSASIA",
   "bugs": {
     "url": "https://github.com/fossasia/susi_desktop/issues"
