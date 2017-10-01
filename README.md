@@ -1,31 +1,32 @@
-# Susi desktop
+# SUSI Desktop
 
 [![Join the chat at https://gitter.im/fossasia/susi_desktop](https://badges.gitter.im/fossasia/susi_desktop.svg)](https://gitter.im/fossasia/susi_desktop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Susi is an AI which replies smartly to anything that you put. Currently Susi is in highly active development and is still in early stages.
+> SUSI AI Desktop Client
 
-### Style Guide
-[Airbnb](https://github.com/airbnb/javascript) Style guide is used in order to create this project. Please consider reading guide before contributing to this project.
+Susi AI is an intelligent Open Source personal assistant. It is capable of chat and voice interaction by using APIs to perform actions such as music playback, making to-do lists, setting alarms, streaming podcasts, playing audiobooks, and providing weather, traffic, and other real time information. Additional functionalities can be added as console services using external APIs. Susi AI is able to answer questions and depending on the context will ask for additional information in order to perform the desired outcome. The core of the assistant is the Susi AI server that holds the "intelligence" and "personality" of Susi AI. The Android and web applications make use of the APIs to access information from a hosted server.
 
-### Dependencies
 
-* This project is created with the help of **Electron** which is a native desktop apps creation kit by Github.
+### Build and Run
 
-* This project also requires `require` library which is used to fetch the response from API.
+The app is based on electron hence make sure that you have electron installed, else simply run `npm i -g electron`.
 
-### Setup Development Environment
-
-Since this app is based on electron, you need [NodeJS](https://nodejs.org) installed in order to run it.
-
-In order to setup the development environment, please make sure the following commands are run primarily.
-
-```shell
-npm install -g electron
-npm install
+Clone the project locally:
+```sh
+$ git clone https://github.com/fossasia/susi_desktop.git
+$ cd susi_desktop
 ```
 
-Once these commands are run, all you need to do in order to run this program is to run `electron .` from the directory you are working in.
+Install project dependencies:
+```sh
+$ npm install
+```
+
+Start the app:
+```sh
+$ npm start
+```
 
 ### Contributing
 
-Please be sure to open an issue before submitting your Pull Request. Be sure to attach the screenshot of running app. All tests that will be provided soon must be passed for PR to be merged.
+Please adhere to [Contributing](https://github.com/fossasia/susi_desktop/blob/master/CONTRIBUTING.md) guidelines, feel free to contact on [gitter](https://gitter.im/fossasia/susi_desktop) if you have any queries.
