@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Susi AI Desktop Client",
   "scripts": {
-    "start": "electron .",
+    "start": "electron app",
     "test": "xo"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "homepage": "https://chat.susi.ai/overview",
   "devDependencies": {
     "electron": "^1.7.8",
+    "electron-debug": "^1.4.0",
     "xo": "^0.18.2"
   },
   "dependencies": {
