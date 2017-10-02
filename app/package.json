@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/fossasia/susi_desktop/issues"
   },
-  "homepage": "https://github.com/fossasia/susi_desktop#readme"
+  "homepage": "https://github.com/fossasia/susi_desktop#readme",
+  "dependencies": {
+    "electron-debug": "^1.4.0"
+  }
 }
