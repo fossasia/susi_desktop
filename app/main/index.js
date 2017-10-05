@@ -1,6 +1,6 @@
 const path = require('path');
 const electron = require('electron');
-const windowStateKeeper = require('electron-window-state');
+const WindowStateKeeper = require('electron-window-state');
 
 const {app, BrowserWindow} = electron;
 
@@ -21,13 +21,12 @@ const iconPath = () => {
 
 // A function to create a new BrowserWindow.
 function createMainWindow() {
-
 	// Default main window state
-	const mainWindowState = new windowStateKeeper({
+	const mainWindowState = new WindowStateKeeper({
 		defaultWidth: 1000,
 		defaultHeight: 600
 	});
-	
+
 	const win = new BrowserWindow({
 		// Creating a new window
 		title: 'SUSI AI',
@@ -68,11 +67,6 @@ function onClosed() {
 	mainWindow = null;
 }
 
-app.on('certificate-error', (event, webContents, url, error, certificate, callback) => {
-	event.preventDefault();
-	callback(true);
-});
-
 app.on('activate', () => {
 	if (!mainWindow) {
 		mainWindow = createMainWindow();
@@ -91,11 +85,10 @@ app.on('ready', () => {
 	page.on('dom-ready', () => {
 		mainWindow.show();
 	});
-
 });
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit();
 	}
-})
+});
