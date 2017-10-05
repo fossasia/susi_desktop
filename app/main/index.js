@@ -19,6 +19,12 @@ const iconPath = () => {
 	return APP_ICON + (process.platform === 'win32' ? '.ico' : '.png');
 };
 
+// Function to handle 'closed' event
+function onClosed() {
+	// Dereference the mainWindow.
+	mainWindow = null;
+}
+
 // A function to create a new BrowserWindow.
 function createMainWindow() {
 	// Default main window state
@@ -60,11 +66,6 @@ function createMainWindow() {
 	mainWindowState.manage(win);
 
 	return win;
-}
-
-function onClosed() {
-	// Dereference the mainWindow.
-	mainWindow = null;
 }
 
 app.on('activate', () => {
