@@ -7,5 +7,4 @@ onload = function () {
 	}
 
 	webview.addEventListener('did-stop-loading', onStopLoad);
-	webview.addEventListener('did-start-loading', onStartLoad);
 };
