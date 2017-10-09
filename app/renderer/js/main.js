@@ -3,8 +3,13 @@ onload = function () {
 	const loading = document.querySelector('#loading');
 
 	function onStopLoad() {
-		loading.style.display = 'none';
+		loading.classList.add('hide');
+	}
+
+	function onStartLoad() {
+		loading.classList.remove('hide');
 	}
 
 	webview.addEventListener('did-stop-loading', onStopLoad);
+	webview.addEventListener('did-start-loading', onStartLoad);
 };
