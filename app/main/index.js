@@ -48,7 +48,8 @@ function createMainWindow() {
 			allowDisplayingInsecureContent: true,
 			nodeIntegration: true
 		},
-		show: false
+		show: false,
+		autoHideMenuBar: true
 	});
 
 	win.on('focus', () => {
