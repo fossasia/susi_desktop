@@ -4,8 +4,12 @@ const WindowStateKeeper = require('electron-window-state');
 
 const {app, BrowserWindow} = electron;
 
-// Globally declaring main window to prevent it from being garbage collected.
+const tray = require('./tray')
+
+// Globally declaring mainWindow and tray to prevent it from being garbage collected.
 let mainWindow;
+let trayIcon;
+let closing;
 
 // Adds debug features like hotkeys for triggering dev tools and reload.
 require('electron-debug')();
@@ -19,10 +23,27 @@ const iconPath = () => {
 	return APP_ICON + (process.platform === 'win32' ? '.ico' : '.png');
 };
 
-// Function to handle 'closed' event
-function onClosed() {
-	// Dereference the mainWindow.
-	mainWindow = null;
+function onTrayToggle(e) {
+		mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show()
+}
+
+function onTrayClose(e) {
+	closing = true
+	mainWindow.close();
+}
+
+function onClosing (e) {
+	// The window has asked to be closed
+	if(!closing) {
+		mainWindow.hide();
+		e.preventDefault();
+	}
+}
+
+function onClosed () {
+	// Dereference the window
+	// For multiple windows store them in an array
+	app.quit();
 }
 
 // A function to create a new BrowserWindow.
@@ -60,6 +81,7 @@ function createMainWindow() {
 		win.show();
 	});
 
+	win.on('close', onClosing);
 	win.on('closed', onClosed);
 
 	win.loadURL(mainURL);
@@ -77,8 +99,12 @@ app.on('activate', () => {
 
 // Triggers when the app is ready.
 app.on('ready', () => {
+	closing = false;
 	// Assigning the globally declared mainWindow
 	mainWindow = createMainWindow();
+
+	// Initializing trayIcon
+	trayIcon = tray.create(onTrayToggle, onTrayClose);
 
 	// Grabbing the DOM
 	const page = mainWindow.webContents;
@@ -91,6 +117,6 @@ app.on('ready', () => {
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
-		app.quit();
+		mainWindow.hide();
 	}
 });
