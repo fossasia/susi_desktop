@@ -6,11 +6,7 @@ const {Menu, Tray} = electron;
 const APP_ICON = path.join(__dirname, '../resources', 'tray');
 
 const iconPath = () => {
-	/* if (process.platform === 'linux') {
-		return APP_ICON + 'linux.png';
-	}
-	return APP_ICON + (process.platform === 'win32' ? 'win.ico' : 'osx.png'); */
-	return APP_ICON + '.png';
+	return APP_ICON + (process.platform === 'win32' ? '.ico' : '.png');
 };
 
 function createTray(onToggle, onClose) {
