@@ -4,7 +4,7 @@ const WindowStateKeeper = require('electron-window-state');
 
 const {app, BrowserWindow} = electron;
 
-const tray = require('./tray')
+const tray = require('./tray');
 
 // Globally declaring mainWindow and tray to prevent it from being garbage collected.
 let mainWindow;
@@ -23,24 +23,24 @@ const iconPath = () => {
 	return APP_ICON + (process.platform === 'win32' ? '.ico' : '.png');
 };
 
-function onTrayToggle(e) {
-		mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show()
+function onTrayToggle() {
+	mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
 }
 
-function onTrayClose(e) {
-	closing = true
+function onTrayClose() {
+	closing = true;
 	mainWindow.close();
 }
 
-function onClosing (e) {
+function onClosing(e) {
 	// The window has asked to be closed
-	if(!closing) {
+	if (!closing) {
 		mainWindow.hide();
 		e.preventDefault();
 	}
 }
 
-function onClosed () {
+function onClosed() {
 	// Dereference the window
 	// For multiple windows store them in an array
 	app.quit();
