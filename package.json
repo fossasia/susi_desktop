@@ -59,7 +59,9 @@
           "prefer-promise-reject-errors": 0,
           "import/no-unresolved": 0,
           "import/no-extraneous-dependencies": 0,
-          "no-prototype-builtins": 0
+          "no-prototype-builtins": 0,
+          "no-unused-vars": 0,
+          "no-unused-expressions": 0
         }
       }
     ],
