@@ -1,7 +1,7 @@
 # SUSI Desktop
 
 [![Join the chat at https://gitter.im/fossasia/susi_desktop](https://badges.gitter.im/fossasia/susi_desktop.svg)](https://gitter.im/fossasia/susi_desktop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/fossasia/susi_desktop.svg?branch=master)](https://travis-ci.org/fossasia/susi_desktop) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
-
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40susiai_)](https://twitter.com/susiai_)
 
 > SUSI AI Desktop Client
 
