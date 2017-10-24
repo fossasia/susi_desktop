@@ -2,6 +2,10 @@
   "name": "susi_desktop",
   "version": "0.0.1",
   "description": "Susi AI Desktop Client",
+  "main": "app",
+  "bin": {
+    "susi": "app/main/index.js"
+  },
   "scripts": {
     "start": "electron app",
     "test": "xo"

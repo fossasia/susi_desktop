@@ -1,3 +1,5 @@
+#!/usr/bin/env electron
+
 const path = require('path');
 const electron = require('electron');
 const WindowStateKeeper = require('electron-window-state');
