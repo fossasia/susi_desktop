@@ -1,0 +1,50 @@
+{	
+	"productName": "SUSI Desktop",
+	"appId": "org.fossasia.susi_desktop",
+	"asar": "true",
+	"linux": {
+      "packageCategory": "GNOME;GTK;Network;AI",
+      "description": "SUSI Desktop Client for Linux",
+      "target": [
+        "deb",
+        "zip",
+        "AppImage"
+      ],
+      "maintainer": "Mario Behling"
+    },
+    "dmg": {
+      "icon": "app/resources/icon.png",
+      "iconSize": 128,
+      "contents": [
+        {
+          "x": 380,
+          "y": 240,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 122,
+          "y": 240,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis-web",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "app/resources/icon.ico",
+      "publisherName": "FOSSASIA"
+    },
+    "nsis": {
+      "perMachine": true,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+}

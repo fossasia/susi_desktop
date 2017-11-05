@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "electron app",
-    "test": "xo"
+    "test": "xo",
+    "pack": "electron-builder",
+    "dist": "electron-builder --dir"
   },
   "repository": {
     "type": "git",
