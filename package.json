@@ -1,14 +1,18 @@
 {
   "name": "susi_desktop",
   "version": "0.0.1",
-  "description": "Susi AI Desktop Client",
+  "description": "SUSI AI Desktop Client",
+  "license": "LGPL-2.1",
+  "email": "<anshu.av97@gmail.com>",
   "main": "app",
   "bin": {
     "susi": "app/main/index.js"
   },
   "scripts": {
     "start": "electron app",
-    "test": "xo"
+    "test": "xo",
+    "pack": "electron-builder",
+    "dist": "electron-builder --dir"
   },
   "repository": {
     "type": "git",
@@ -77,5 +81,5 @@
       "browser",
       "mocha"
     ]
-}
+  }
 }
