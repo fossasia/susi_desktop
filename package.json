@@ -1,9 +1,7 @@
 {
   "name": "susi_desktop",
-  "version": "0.0.1",
-  "description": "SUSI AI Desktop Client",
-  "license": "LGPL-2.1",
-  "email": "<anshu.av97@gmail.com>",
+  "version": "0.0.2",
+  "description": "Susi AI Desktop Client",
   "main": "app",
   "bin": {
     "susi": "app/main/index.js"

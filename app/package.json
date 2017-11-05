@@ -1,6 +1,6 @@
 {
   "name": "susi_desktop",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SUSI AI Desktop Client",
   "main": "./main/index.js",
   "repository": {
