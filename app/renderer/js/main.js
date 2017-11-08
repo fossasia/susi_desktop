@@ -1,6 +1,6 @@
 onload = function () {
 	const webview = document.querySelector('webview');
-	const loading = document.querySelector('#loading');
+	const loading = document.querySelector('#loader');
 
 	function onStopLoad() {
 		loading.classList.add('hide');
