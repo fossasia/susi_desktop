@@ -37,6 +37,10 @@ $ npm install
 $ npm start
 ```
 
+###### Screenshots
+
+![Susi Desktop Screenshot](/screenshot/Screenshot.png)
+
 ### Contributing
 
 Please adhere to [Contributing](https://github.com/fossasia/susi_desktop/blob/master/CONTRIBUTING.md) guidelines, feel free to contact on [gitter](https://gitter.im/fossasia/susi_desktop) if you have any queries.
