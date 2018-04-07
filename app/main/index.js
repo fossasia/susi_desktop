@@ -4,7 +4,8 @@ const path = require('path');
 const electron = require('electron');
 const WindowStateKeeper = require('electron-window-state');
 
-const {app, BrowserWindow} = electron;
+const {app, BrowserWindow, Menu} = electron;
+const {recordIt} = require('./../speech_api/main');
 
 const tray = require('./tray');
 
@@ -12,6 +13,10 @@ const tray = require('./tray');
 let mainWindow;
 let trayIcon;
 let closing;
+
+const record = () => {
+	recordIt();
+}
 
 // Adds debug features like hotkeys for triggering dev tools and reload.
 require('electron-debug')();
@@ -115,6 +120,97 @@ app.on('ready', () => {
 	page.on('dom-ready', () => {
 		mainWindow.show();
 	});
+	const template = [
+    {
+      label: 'Edit',
+      submenu: [
+        {role: 'undo'},
+        {role: 'redo'},
+        {type: 'separator'},
+        {role: 'cut'},
+        {role: 'copy'},
+        {role: 'paste'},
+        {role: 'pasteandmatchstyle'},
+        {role: 'delete'},
+        {role: 'selectall'},
+        {label: 'Voice Input',
+        click: record
+      }
+      ]
+    },
+    {
+      label: 'View',
+      submenu: [
+        {role: 'reload'},
+        {role: 'forcereload'},
+        {role: 'toggledevtools'},
+        {type: 'separator'},
+        {role: 'resetzoom'},
+        {role: 'zoomin'},
+        {role: 'zoomout'},
+        {type: 'separator'},
+        {role: 'togglefullscreen'}
+      ]
+    },
+    {
+      role: 'window',
+      submenu: [
+        {role: 'minimize'},
+        {role: 'close'}
+      ]
+    },
+    {
+      role: 'help',
+      submenu: [
+        {
+          label: 'Learn More',
+          click () { require('electron').shell.openExternal('https://electronjs.org') }
+        }
+      ]
+    }
+  ]
+  
+  if (process.platform === 'darwin') {
+    template.unshift({
+      label: app.getName(),
+      submenu: [
+        {role: 'about'},
+        {type: 'separator'},
+        {role: 'services', submenu: []},
+        {type: 'separator'},
+        {role: 'hide'},
+        {role: 'hideothers'},
+        {role: 'unhide'},
+        {type: 'separator'},
+        {role: 'quit'}
+      ]
+    })
+  
+    // Edit menu
+    template[1].submenu.push(
+      {type: 'separator'},
+      {
+        label: 'Speech',
+        submenu: [
+          {role: 'startspeaking'},
+          {role: 'stopspeaking'}
+        ]
+      }
+    )
+  
+    // Window menu
+    template[3].submenu = [
+      {role: 'close'},
+      {role: 'minimize'},
+      {role: 'zoom'},
+      {type: 'separator'},
+      {role: 'front'}
+    ]
+  }
+  
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
+
 });
 
 app.on('window-all-closed', () => {
