@@ -12,13 +12,6 @@ body {
 	background: url(../../resources/loader.gif) center no-repeat #fff;
 }
 
-#wrapper {
-	height: 102%;
-	width: 102%;
-	margin-left: -8px;
-	margin-top: -8px;
-}
-
 /* CSS for the webview element */
 webview {
 	display: inline-flex;
