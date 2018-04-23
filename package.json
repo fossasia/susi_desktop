@@ -10,7 +10,8 @@
     "start": "electron app",
     "test": "xo",
     "pack": "electron-builder",
-    "dist": "electron-builder --dir"
+    "dist": "electron-builder --dir",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   "homepage": "https://chat.susi.ai/overview",
   "devDependencies": {
     "electron": "^1.8.2",
+    "husky": "^0.14.3",
     "xo": "^0.18.2"
   },
   "dependencies": {
