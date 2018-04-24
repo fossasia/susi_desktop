@@ -59,7 +59,6 @@ module.exports = exports = {
         "no-labels": WARN,
         "no-lone-blocks": WARN,
         "no-loop-func": ERROR,
-        "no-magic-numbers": WARN,
         "no-multi-spaces": ERROR,
         "no-multi-str": WARN,
         "no-native-reassign": ERROR,
